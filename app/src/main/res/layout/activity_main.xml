@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
     tools:context=".MainActivity">
 
     <com.example.testapplication.CustomView
         android:id="@+id/custom_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/button_test"/>
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <Button
-        android:layout_alignParentBottom="true"
+        android:id="@+id/button_capture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button_test"
-        android:text="Test"/>
+        android:text="Capture" />
 
-</RelativeLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_view"
+        android:layout_width="160dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:scaleType="fitCenter" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
